@@ -3,11 +3,13 @@
   <form [formGroup]="requestEmailSupportForm" (submit)="submit()" class="form">
     <mat-form-field>
       <input matInput placeholder="Name" formControlName="name" />
+      <mat-icon matSuffix>person</mat-icon>
       <mat-error *ngIf="requestEmailSupportForm.get('name')?.value.length == 0">Name is required</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="Email ID" formControlName="email" />
+      <mat-icon matSuffix>email</mat-icon>
       <mat-error
         *ngIf="requestEmailSupportForm.get('email')?.invalid && (requestEmailSupportForm.get('email')?.dirty || requestEmailSupportForm.get('email')?.touched)">
         <ng-container *ngIf="requestEmailSupportForm.get('email')?.errors?.['required']">
