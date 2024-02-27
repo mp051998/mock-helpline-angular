@@ -1,0 +1,22 @@
+.container {
+  padding: 1rem;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    min-width: min(350px, 90vw);
+    max-width: min(650px, 90vw);
+    // justify-content: center;
+    // align-items: center;
+    margin: 0 auto;
+
+    mat-form-field {
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+}

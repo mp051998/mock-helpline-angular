@@ -1,0 +1,43 @@
+.menu {
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: min(400px, 90vw);
+
+  &-item {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.711);
+    }
+
+    &-card {
+      padding: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      position: absolute;
+      left: 1px;
+
+
+      &-header {
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 1px;
+      }
+
+      &-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        // position: absolute;
+        // top: 5px;
+      }
+    }
+
+  }
+}

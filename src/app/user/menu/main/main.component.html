@@ -1,0 +1,46 @@
+<div class="menu">
+  <div *ngFor="let menuCard of menuCards">
+    <div class="menu-item" (click)="onMenuCardClick(menuCard.id)">
+      <mat-grid-list cols="5">
+        <mat-grid-tile colspan="1">
+          <i class="material-icons icon-large" style="font-size: 2rem;">{{menuCard.icon}}</i>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+          <div class="menu-item-card">
+            <div class="menu-item-card-header">
+              <h2>{{menuCard.title}}</h2>
+            </div>
+            <br />
+            <div class="menu-item-card-content">
+              <p>{{menuCard.description}}</p>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+  <!--<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{menuCard.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{menuCard.description}}</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Phone</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Choose this option to report support through phone.</p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Chat</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Choose this option to report support through chat.</p>
+    </mat-card-content>
+  </mat-card> -->
+</div>
