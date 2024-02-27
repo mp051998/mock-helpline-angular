@@ -1,6 +1,7 @@
 import { CommonModule, NgIf } from '@angular/common';
 
 import { EmailComponent } from './pages/email/email.component';
+import { FaqComponent } from './pages/faq/faq.component';
 import { MainComponent } from './main/main.component';
 import { MenuRoutingModule } from './menu-routing.module';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { UserMenuMaterialModule } from './menu-material.module';
     // Components
     MainComponent,
     EmailComponent,
+    FaqComponent,
     PhoneComponent,
     // Modals
     SuccessModalComponent

@@ -1,0 +1,9 @@
+.container {
+  padding: 1rem;
+
+  .content {
+    min-width: min(500px, 90vw);
+    max-width: max(500px, 70vw);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+  <mat-accordion>
+    <div class="content" *ngFor="let faqGroup of faqs">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>{{ faqGroup.title }}</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let faq of faqGroup.items; let i=index;">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ i+1 }}. {{ faq.question }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ faq.answer }}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
+    </div>
+  </mat-accordion>
+</div>
