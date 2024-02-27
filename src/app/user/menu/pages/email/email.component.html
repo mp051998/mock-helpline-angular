@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Get support through email</h2>
+  <form [formGroup]="requestEmailSupportForm" (submit)="submit()" class="form">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name" />
+      <mat-error *ngIf="requestEmailSupportForm.get('name')?.value.length == 0">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email ID" formControlName="email" />
+      <mat-error
+        *ngIf="requestEmailSupportForm.get('email')?.invalid && (requestEmailSupportForm.get('email')?.dirty || requestEmailSupportForm.get('email')?.touched)">
+        <ng-container *ngIf="requestEmailSupportForm.get('email')?.errors?.['required']">
+          Email ID is required
+        </ng-container>
+        <ng-container *ngIf="requestEmailSupportForm.get('email')?.errors?.['email']">
+          Invalid email format
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Note" formControlName="note" rows="4"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!requestEmailSupportForm.valid">Submit</button>
+  </form>
+</div>

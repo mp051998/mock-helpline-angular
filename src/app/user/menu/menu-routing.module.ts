@@ -1,12 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { EmailComponent } from './pages/email/email.component';
 import { MainComponent } from './main/main.component';
 import { NgModule } from '@angular/core';
 import { PhoneComponent } from './pages/phone/phone.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
-  { path: 'phone', component: PhoneComponent }
+  { path: 'email', component: EmailComponent },
+  { path: 'phone', component: PhoneComponent },
 ];
 
 @NgModule({

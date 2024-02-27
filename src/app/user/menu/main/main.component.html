@@ -1,18 +1,18 @@
 <div class="menu">
-  <div *ngFor="let menuCard of menuCards">
-    <div class="menu-item" (click)="onMenuCardClick(menuCard.id)">
+  <div *ngFor="let menuItem of menuItems">
+    <div class="menu-item" (click)="onMenuCardClick(menuItem)">
       <mat-grid-list cols="5">
         <mat-grid-tile colspan="1">
-          <i class="material-icons icon-large" style="font-size: 2rem;">{{menuCard.icon}}</i>
+          <i class="material-icons icon-large" style="font-size: 2rem;">{{menuItem.icon}}</i>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <div class="menu-item-card">
             <div class="menu-item-card-header">
-              <h2>{{menuCard.title}}</h2>
+              <h2>{{menuItem.title}}</h2>
             </div>
             <br />
             <div class="menu-item-card-content">
-              <p>{{menuCard.description}}</p>
+              <p>{{menuItem.description}}</p>
             </div>
           </div>
         </mat-grid-tile>
