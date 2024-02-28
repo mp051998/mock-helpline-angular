@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { PhoneComponent } from './pages/phone/phone.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
+import { UserCasesService } from '../../../services/user/cases';
 import { UserMenuMaterialModule } from './menu-material.module';
 
 @NgModule({
@@ -25,6 +26,9 @@ import { UserMenuMaterialModule } from './menu-material.module';
     MenuRoutingModule,
     UserMenuMaterialModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    UserCasesService
   ]
 })
 export class MenuModule { }
