@@ -28,7 +28,7 @@ export class PhoneComponent {
   submit() {
     console.log("Clicked submit button!");
 
-    this.userCasesSvc.insertUserCasePhone(
+    this.userCasesSvc.requestSupportByPhone(
       this.requestCallbackForm.value.name,
       this.requestCallbackForm.value.phone,
       this.requestCallbackForm.value.note

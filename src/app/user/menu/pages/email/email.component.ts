@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SuccessModalComponent } from '../../modals/success-modal/success-modal.component';
+import { UserCasesService } from '../../../../../services/user/cases';
 
 @Component({
   selector: 'app-email',
@@ -14,7 +15,8 @@ export class EmailComponent {
 
   constructor(
     private dialog: MatDialog,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private userCasesSvc: UserCasesService
   ) {
     this.requestEmailSupportForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -26,9 +28,19 @@ export class EmailComponent {
   submit() {
     console.log("Clicked submit button!");
 
-    // TODO: Implement this logic
+    this.userCasesSvc.requestSupportByEmail(
+      this.requestEmailSupportForm.value.name,
+      this.requestEmailSupportForm.value.email,
+      this.requestEmailSupportForm.value.note
+    ).then(response => {
+      console.log(response);
+      this.openSuccessModal();
+    }).catch(error => {
+      console.error(error);
+    });
+  }
 
-    // Show success modal
+  openSuccessModal() {
     const successModalDialogRef = this.dialog.open(SuccessModalComponent, {
       width: 'auto',
       height: 'auto'
